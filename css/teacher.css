@@ -1,0 +1,217 @@
+/* Vue de bienvenue */
+#welcomeTeacher-buttons {
+	display: flex;
+}
+
+#welcomeTeacher-buttons button {
+	background: var(--blue);
+	color: var(--white);
+	border-color: var(--blue);
+	flex: 1;
+	margin-right: 10px;
+	text-transform: uppercase;
+	font-size: 17.5px;
+	font-weight: bold;
+	border-radius: 10px;
+	padding: 5px 10px;
+}
+
+#welcomeTeacher-buttons button:last-child {
+	margin-right: 0;
+}
+
+#welcomeTeacher-buttons button:hover {
+	background: var(--white);
+	color: var(--blue);
+}
+
+/* Zone de sélection pour une liste d'étudiants */
+.selection {
+	margin-bottom: 30px;
+	text-align: left;
+	display: flex;
+}
+
+.selection > div {
+	margin-right: 10px;
+	display: flex;
+	flex-direction: column;
+}
+
+.selection > div:last-child {
+	margin-right: 0;
+}
+
+.custom-select {
+	position: relative;
+	width: 250px;
+}
+
+.custom-select select {
+	display: none;
+}
+
+.select-selected {
+	background-color: var(--white);
+}
+
+.select-selected:after {
+	position: absolute;
+	content: "";
+	top: 14px;
+	right: 10px;
+	width: 0;
+	height: 0;
+	border: 6px solid transparent;
+	border-color: var(--blue) transparent transparent transparent;
+}
+
+.select-selected.select-arrow-active:after {
+	border-color: transparent transparent var(--blue) transparent;
+	top: 7px;
+}
+
+.select-items div,.select-selected {
+  color: var(--blue);
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+.select-items {
+  position: absolute;
+  background-color: var(--white);
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.select-hide {
+	display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.select-items .hidden {
+	display: none;
+}
+
+/* Enseignant — vérification des spécialités */
+#specialitiesChecking-table {
+	border: 1px solid var(--white);
+	margin-bottom: 20px;
+}
+
+#specialitiesChecking-table th {
+	background: var(--white);
+	color: var(--blue);
+	padding: 7.5px 15px;
+	font-size: 87.5%;
+	font-weight: bold;
+	text-align: left;
+}
+
+#specialitiesChecking-table td {
+	padding: 7.5px 15px;
+}
+
+#specialitiesChecking-table tr:nth-child(even) td {
+	background: #f2f2f240;
+}
+
+#specialitiesChecking-table td:last-child {
+	text-align: center;
+}
+
+/* Enseignant — vérification des UE */
+#tus-checking > section:last-child {
+	display: flex;
+}
+
+#student-TUs header {
+	background: none;
+	font-size: inherit;
+	box-shadow: none;
+	display: flex;
+}
+
+#dateOfRequest {
+	flex-grow: 1;
+}
+
+button[data-action='sendMessage'] {
+	background: none;
+	color: var(--white);
+    display: flex;
+    font-size: 30px;
+    padding: 0;
+    width: 33px;
+    justify-content: center;
+    border: none;
+    opacity: 0.75;
+}
+
+button[data-action='sendMessage']:before {
+    content: '\f0e0';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+button[data-action='sendMessage']:hover {
+    opacity: 1;
+}
+
+/* Enseignant — messages */
+#teacher-messages > div {
+	display: flex;
+	width: 100%;
+}
+
+#messagesList {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	flex-basis: 25%;
+	padding-right: 10px;
+	border-right: 1px solid var(--white);
+	opacity: 0.75;
+	transition-duration: .25s;
+}
+
+#messagesList:hover {
+	opacity: 1;
+}
+
+.chat-button {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid var(--white);
+	margin-bottom: 10px;
+	cursor: pointer;
+	padding: 5px 10px;
+	font-size: 12.5px;
+}
+
+.chat-button.selected {
+	font-weight: bold;
+	cursor: default;
+}
+
+#teacher-messages .chat {
+	flex-grow: 2;
+	flex-basis: 50%;
+	border-right: 1px solid var(--white);
+	padding: 0 10px;
+}
+
+#teacher-messages .user {
+	flex-grow: 1;
+	flex-basis: 25%;
+	font-size: 12.5px;
+	padding-left: 10px;
+	opacity: 0.75;
+}

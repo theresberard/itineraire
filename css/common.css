@@ -1,0 +1,149 @@
+/* Défintion des couleurs */
+:root {
+    --orange: #e5442d;
+    --blue: #293878;
+    --grey: #6f6f6e;
+    --white: #F2F2F2;
+    --yellow: #C49A1B;
+    --brown: #786429;
+}
+
+/* Bouton de confirmation, de passage à l'étape suivante */
+button[name='submit']:hover {
+    background: green;
+    color: var(--white);
+}
+
+/* Bouton d'annulation, de retour en arrière, de refus */
+button[name='cancel'] {
+    background: none;
+    color: var(--white);
+}
+
+button[name='cancel']:hover {
+    background: var(--white);
+    color: var(--blue);
+}
+
+button[name='cancel']:hover + button[name='submit'] {
+    opacity: 0.5;
+}
+
+
+/* Bouton switch */
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+input:checked + .slider {
+  background-color: var(--yellow);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--yellow);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 22px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Colonnes de tri */
+.sortable {
+    cursor: pointer;
+}
+
+.sortable:after {
+    content: '\f0da';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    float: right;
+    margin-left: 15px;
+}
+
+.sortable.asc:after {
+    content: '\f0d8';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+.sortable.desc:after {
+    content: '\f0d7';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+/* Afficher et masquer des éléments déroulants */
+.collapsible {
+    outline: none;
+}
+
+.collapsible:after {
+    content: '\f078';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    float: right;
+    margin-left: 5px;
+}
+
+.collapsed:after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f077";
+}
+
+/* Affichage d'une vue */
+[data-state='visible'] {
+    display: flex;
+}
+
+/* Camouflage d'une vue */
+[data-state='hidden'] {
+    display: none;
+}

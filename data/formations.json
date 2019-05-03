@@ -1,0 +1,19 @@
+{
+	"1": "Didactique des langues — 1re année",
+	"2": "Didactique des langues — 2de année",
+	
+	"M1-P DDL-FLE": "Français langue étrangère (en présentiel)",
+	"M1-D DDL-FLE": "Français langue étrangère (à distance)",
+	"M1 DDL-DIV": "Diversité des situations, des approches et des langues",
+	"M2 DDL-M-FLE": "Métiers du français langue étrangère",
+	"M2 DDL-DIV": "Diversité des situations, des approches et des langues",
+	"M2 DDL-MESR": "Métiers de l'enseignement supérieur et de la recherche",
+
+	"DIF": "Diffusion, ingénierie et conseil",
+	"DILI": "TICE et numérique éducatif",
+	"DIALL": "Didactique de l'allemand",
+	"DIANG": "Didactique de l'anglais",
+	"DIPLU": "Didactique du plurilinguïsme",
+	"DIFLS": "Didactique du français langue seconde",
+	"DIFLEC": "Didactique du français langue de l'école"
+}

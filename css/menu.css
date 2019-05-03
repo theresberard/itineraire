@@ -1,0 +1,153 @@
+body > header {
+    background-color: var(--blue);
+    font-size: 15px;
+    box-shadow: 0 1px 16px rgba(0, 0, 0, .4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+/* Menu */
+#menu {
+    color: var(--blue);    
+    background-color: var(--white);
+    padding: 15px;
+    font-size: 15px;
+    box-shadow: 0 1px 16px rgba(0, 0, 0, .4);
+}
+
+#menu ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#menu li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+#menu li:first-child {
+    font-size: 16.5px;
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+    flex-grow: 1;
+}
+
+#menu li:last-child {
+    margin-right: 0;
+}
+
+#menu a, #menu label {
+    padding-bottom: 2.5px;
+    opacity: 0.5;
+    position: relative;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+#menu a {
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    text-transform: none;
+    cursor: pointer;
+}
+
+#menu label {
+    cursor: pointer;
+}
+
+#menu a:before, #menu label:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+#menu a:hover, #menu label:hover {
+    color: var(--orange);
+    opacity: 1;
+}
+
+#menu a:hover:before, #menu label:hover:before {
+    background-color: var(--orange);
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+}
+
+#menu input {
+    display: none;
+}
+
+#menu input:checked + label {
+    opacity: 1;
+}
+
+#menu input:checked + label:before {
+    background-color: var(--blue);
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+}
+
+#menu input:checked + label:hover {
+    color: var(--blue);
+}
+
+header td {
+    vertical-align: middle;
+}
+
+#menu .button-log-out, .button-settings {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Profil de l'utilisateur */
+header .user {
+    display: flex;
+    transition: 0.3s;
+    height: 75px;
+    justify-content: center;
+    align-items: center;
+    font-size: 75%;
+    opacity: 0.5;
+}
+
+header .user:hover {
+    opacity: 1;
+    color: white;
+    background-color: var(--brown);
+}
+
+header .fa-user-circle {
+    font-size: 52px;
+}
+
+header .user > div {
+    padding-left: 15px;
+}
+
+header .user #user-name {
+    font-size: 150%;
+    padding-bottom: 0.25em;
+}
+
+header .user .info {
+    margin-right: 10px;
+}
+
+header .user .info:last-child {
+    margin-right: 0;
+}

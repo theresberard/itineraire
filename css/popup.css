@@ -1,0 +1,11 @@
+#popup[data-content="chat"] h1:before {
+	content: 'Échanger';
+}
+
+#popup[data-content="welcome"] h1:before {
+	content: 'Bienvenue !';
+}
+
+#popup[data-content="welcome"] button[name="close"] {
+	display: none;
+}
